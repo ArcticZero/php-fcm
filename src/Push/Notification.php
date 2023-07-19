@@ -246,7 +246,11 @@ class Notification implements Request
         
         if (!empty($this->data)) {
             $request['data'] = $this->data;
-        }
+	}
+
+	// set priority
+	$request['priority'] = "high";
+
         return $request; 
     }
 }
